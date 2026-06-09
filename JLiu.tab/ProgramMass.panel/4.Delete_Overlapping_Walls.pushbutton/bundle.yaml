@@ -1,0 +1,3 @@
+title: "4.Delete\nOverlapping Walls"
+tooltip: "Find overlapping wall pairs from warnings and delete the shorter wall"
+author: "Mass_To_Room Extension"

@@ -1,0 +1,59 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Curve to Wall"
+        Height="500" Width="480"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="0,0,0,4"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,0,0,12"/>
+            <Setter Property="Height" Value="28"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,0,0,12"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel Margin="20">
+
+        <TextBlock Text="Wall type" FontWeight="SemiBold"/>
+        <ComboBox x:Name="cb_wall_type"/>
+
+        <TextBlock Text="Base constraint (level)" FontWeight="SemiBold"/>
+        <ComboBox x:Name="cb_base_level"/>
+
+        <TextBlock Text="Top constraint (level)" FontWeight="SemiBold"/>
+        <ComboBox x:Name="cb_top_level"/>
+
+        <TextBlock Text="Base offset (feet)" FontWeight="SemiBold"/>
+        <TextBox x:Name="tb_base_offset" Text="0.5"/>
+
+        <TextBlock Text="Top offset (feet)" FontWeight="SemiBold"/>
+        <TextBox x:Name="tb_top_offset" Text="-0.5"/>
+
+        <Separator Margin="0,4,0,12"/>
+
+        <CheckBox x:Name="chk_delete_curves"
+                  Content="Delete source detail curves after wall creation"
+                  IsChecked="True" Margin="0,0,0,8"/>
+
+        <TextBlock x:Name="tb_curve_count" Text="Detail curves found: 0"
+                   Foreground="Gray" FontStyle="Italic" Margin="0,0,0,8"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
+                    Margin="0,12,0,0">
+            <Button Content="Create Walls" Width="110" Height="32"
+                    IsDefault="True" Click="run_click"/>
+            <Button Content="Cancel" Width="90" Height="32"
+                    Margin="8,0,0,0" IsCancel="True" Click="cancel_click"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

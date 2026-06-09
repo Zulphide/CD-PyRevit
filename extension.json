@@ -1,0 +1,12 @@
+{
+    "builtin": "False",
+    "default_enabled": "True",
+    "type": "extension",
+    "rocket_mode_compatible": "True",
+    "name": "jliu Dev Extensions",
+    "description": "Toolset developed by jliu at CannonDesign",
+    "author": "James Liu",
+    "author_profile": "https://www.linkedin.com/in/huazhouliu",
+    "image": "",
+    "dependencies": []
+}
